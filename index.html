@@ -163,6 +163,8 @@
             position: relative;
             z-index: 1;
         }
+        
+
 
         @keyframes titlePulse {
             0%, 100% { transform: scale(1); filter: brightness(1); }
@@ -521,11 +523,29 @@
             color: #cbd5e1;
             margin-bottom: 15px;
         }
+        .prize-highlight {
+            font-size: 2.8rem;
+            font-weight: 900;
+            margin-top: 10px;
+            letter-spacing: 4px;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: titlePulse 3s ease-in-out infinite;
+        }
 
         @media (max-width: 768px) {
+            .prize-highlight {
+                font-size: 1.8rem;
+                letter-spacing: 2px;
+            }
+
             h1 {
                 font-size: 3rem;
                 letter-spacing: 4px;
+                font-size: 1.8rem;
+                letter-spacing: 2px
             }
 
             .events-container {
@@ -569,11 +589,10 @@
             <div class="greeting">Cordial Greetings from</div>
             <div class="college-name">A.V.P. College of Arts & Science, Tirupur</div>
             <h1>KONDATTAM'26</h1>
+            <h2 class="prize-highlight">WIN OVERALL TROPHY 🏆 & ATTRACTIVE CASH PRIZES</h2>
             <div class="subtitle">National Level Intercollegiate Meet</div>
             <div class="tagline">For the Gen Z Adventurers</div>
-            <div class="tagline" style="color:#fbbf24; font-weight:700;">
-                Overall Trophy 🏆 & Attractive Cash Prizes to be Won
-            </div>
+        
 
             <div class="date-info">29th January 2026 (Thursday)</div>
         </header>
