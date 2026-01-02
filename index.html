@@ -135,19 +135,26 @@
             100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
         }
 
-        .greeting {
-            font-size: 1rem;
-            margin-bottom: 8px;
-            color: #94a3b8;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+        .college-logo {
+            max-width: 600px;
+            width: 90%;
+            height: auto;
+            margin: 0 auto 25px;
+            display: block;
+            filter: drop-shadow(0 10px 30px rgba(59, 130, 246, 0.3));
+            animation: logoFloat 3s ease-in-out infinite;
+            position: relative;
+            z-index: 1;
+            object-fit: contain;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         }
 
-        .college-name {
-            font-size: 1.3rem;
-            color: #e2e8f0;
-            margin-bottom: 25px;
-            font-weight: 600;
+        @keyframes logoFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
 
         h1 {
@@ -163,8 +170,6 @@
             position: relative;
             z-index: 1;
         }
-        
-
 
         @keyframes titlePulse {
             0%, 100% { transform: scale(1); filter: brightness(1); }
@@ -523,6 +528,7 @@
             color: #cbd5e1;
             margin-bottom: 15px;
         }
+        
         .prize-highlight {
             font-size: 2.8rem;
             font-weight: 900;
@@ -536,6 +542,11 @@
         }
 
         @media (max-width: 768px) {
+            .college-logo {
+                max-width: 90%;
+                width: 90%;
+            }
+
             .prize-highlight {
                 font-size: 1.8rem;
                 letter-spacing: 2px;
@@ -544,8 +555,6 @@
             h1 {
                 font-size: 3rem;
                 letter-spacing: 4px;
-                font-size: 1.8rem;
-                letter-spacing: 2px
             }
 
             .events-container {
@@ -586,14 +595,12 @@
     
     <div class="container">
         <header>
-            <div class="greeting">Cordial Greetings from</div>
-            <div class="college-name">A.V.P. College of Arts & Science, Tirupur</div>
+            <img src="1_2025_AVP_Logo_PNG.png" alt="AVP College Logo" class="college-logo">
+            
             <h1>KONDATTAM'26</h1>
             <h2 class="prize-highlight">WIN OVERALL TROPHY 🏆 & ATTRACTIVE CASH PRIZES</h2>
             <div class="subtitle">National Level Intercollegiate Meet</div>
             <div class="tagline">For the Gen Z Adventurers</div>
-        
-
             <div class="date-info">29th January 2026 (Thursday)</div>
         </header>
 
@@ -769,103 +776,4 @@
                     <ul class="event-rules">
                         <li>Photographs must strictly adhere to the announced theme</li>
                         <li>Submitted photographs must be original and captured by the participant</li>
-                        <li>Each participant may submit 1-2 photographs</li>
-                        <li>File format: JPEG / JPG</li>
-                        <li>Two participants per team</li>
-                        <li><strong>Themes:</strong> Life in Nature, Indian Culture and Traditions, Youth and Aspirations</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="event-card">
-                <div class="event-header offstage-header">
-                    <span class="event-emoji">🎬</span>
-                    <h3>Short Film</h3>
-                </div>
-                <div class="event-body">
-                    <ul class="event-rules">
-                        <li>Film length: 3 to 5 minutes with Good themes</li>
-                        <li>Tamil and English language are permitted</li>
-                        <li>The film must be original, obscene, offensive, political, or religiously sensitive content is strictly prohibited</li>
-                        <li>File format: MP4, films must be submitted via Google Drive / Pen Drive</li>
-                        <li>Up to six participants are allowed in the acting team, one/two participants can present the film</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="event-card">
-                <div class="event-header offstage-header">
-                    <span class="event-emoji">🎤</span>
-                    <h3>Singing</h3>
-                </div>
-                <div class="event-body">
-                    <ul class="event-rules">
-                        <li>Karaoke should be brought in mp3 format</li>
-                        <li>Max of 3 minutes only</li>
-                        <li>Single Participant</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="contact-section">
-            <h2>Contact Coordinators</h2>
-            <p style="font-size: 1.1rem; color: #cbd5e1;">For Queries, please contact:</p>
-            <div class="coordinators">
-                <div class="coordinator">
-                    <h3>Dr. L. Mahalakshmi</h3>
-                    <p>9865905742</p>
-                </div>
-                <div class="coordinator">
-                    <h3>Ms. C. Revathi</h3>
-                    <p>6383506210</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="main-register-section">
-            <h2 class="register-title">Brand Yourself with Your Talents</h2>
-            <p class="deadline">Last Date for Registration: 29th January 2026</p>
-            <button class="main-register-btn" onclick="window.open('https://forms.gle/xMGPhy9T6y7RgxKX9', '_blank')">
-                Register Now
-            </button>
-            <br>
-            <button class="payment-btn" onclick="window.open('upi://pay?pa=621401007254@icici&pn=AVP COLLEGE OF ARTS AND SCIENCE LSC&tr=EZYS9842205125&cu=INR&mc=8241', '_blank')">
-                Complete Payment
-            </button>
-        </div>
-
-        <footer>
-            <p>Join us for an unforgettable celebration of talent and creativity</p>
-            <p style="margin-top: 15px;">© 2026 A.V.P. College of Arts & Science, Tirupur</p>
-        </footer>
-    </div>
-
-    <script>
-        // Countdown Timer
-        const eventDate = new Date('January 29, 2026 09:30:00').getTime();
-
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const distance = eventDate - now;
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById('days').textContent = String(days).padStart(2, '0');
-            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
-
-            if (distance < 0) {
-                document.getElementById('countdown').innerHTML = '<p style="font-size: 2rem; color: #34d399;">Event is Live Now!</p>';
-            }
-        }
-
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
-    </script>
-</body>
-</html>
+                        <li>Each participant may
